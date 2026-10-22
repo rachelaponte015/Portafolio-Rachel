@@ -64,7 +64,7 @@ export const Header: React.FC = () => {
         </a>
 
         {/* Navegación Desktop */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -82,7 +82,7 @@ export const Header: React.FC = () => {
           {/* Botón de Contacto Rápido */}
           <a
             href="#contact"
-            className="hidden sm:inline-flex items-center px-4 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-white bg-sky-600 hover:bg-sky-500 shadow-md shadow-sky-600/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+            className="hidden lg:inline-flex items-center px-4 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-white bg-sky-600 hover:bg-sky-500 shadow-md shadow-sky-600/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
           >
             Contáctame
           </a>
@@ -90,7 +90,7 @@ export const Header: React.FC = () => {
           {/* Botón móvil */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl text-slate-200 hover:bg-slate-800 focus:outline-none"
+            className="lg:hidden p-2 rounded-xl text-slate-200 hover:bg-slate-800 focus:outline-none"
             aria-label="Abrir menú de navegación"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -100,7 +100,7 @@ export const Header: React.FC = () => {
 
       {/* Menú Mobile desplegable */}
       {mobileMenuOpen && (
-        <div className="md:hidden glass-panel border-b border-sky-500/20 px-4 pt-2 pb-6 space-y-3">
+        <div className="lg:hidden glass-panel border-b border-sky-500/20 px-4 pt-2 pb-6 space-y-3">
           {navLinks.map((link) => (
             <a
               key={link.name}
